@@ -1,62 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- HOME PAGE -->
   <url>
-    <loc>https://olympiashouseboats.com/</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://yourdomain.com/</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765810/DSC_0045_oxenpq.jpg</image:loc>
-      <image:title>Olympias House Boats on Dal Lake Srinagar Kashmir</image:title>
-      <image:caption>Luxury houseboat stay on Dal Lake, Srinagar, Kashmir — Olympias House Boats, Ghat No.13, Boulevard Road</image:caption>
-    </image:image>
   </url>
 
-  <!-- ROOMS PAGE -->
   <url>
-    <loc>https://olympiashouseboats.com/rooms.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://yourdomain.com/about.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/rooms.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://res.cloudinary.com/dq8d09pnr/image/upload/v1778766173/DSC_0032_rjplbn.jpg</image:loc>
-      <image:title>Luxury rooms at Olympias House Boats Dal Lake Srinagar</image:title>
-    </image:image>
   </url>
 
-  <!-- SERVICES PAGE -->
   <url>
-    <loc>https://olympiashouseboats.com/services.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
-  <!-- GALLERY PAGE -->
-  <url>
-    <loc>https://olympiashouseboats.com/gallery.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://yourdomain.com/services.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- ABOUT PAGE -->
   <url>
-    <loc>https://olympiashouseboats.com/about.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://yourdomain.com/gallery.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 
-  <!-- CONTACT PAGE -->
   <url>
-    <loc>https://olympiashouseboats.com/contact.html</loc>
-    <lastmod>2025-01-15</lastmod>
+    <loc>https://yourdomain.com/contact.html</loc>
+    <lastmod>2026-05-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/privacy.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://yourdomain.com/terms.html</loc>
+    <lastmod>2026-05-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
