@@ -7,4 +7,4 @@ Disallow: /config/
 Disallow: /includes/
 Disallow: /cgi-bin/
 
-Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://olympiasathena.com/sitemap.xml
