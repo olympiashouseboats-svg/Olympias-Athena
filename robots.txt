@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-Disallow: /admin/
-Disallow: /private/
-Disallow: /config/
-Disallow: /includes/
-Disallow: /cgi-bin/
-
 Sitemap: https://olympiasathena.com/sitemap.xml
