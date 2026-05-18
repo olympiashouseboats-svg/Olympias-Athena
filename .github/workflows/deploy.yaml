@@ -1,0 +1,204 @@
+name: Deploy to GitHub Pages
+
+on:
+  # Run on push to main branch
+  push:
+    branches: [ main, master ]
+  
+  # Manual trigger
+  workflow_dispatch:
+  
+  # Daily sitemap update
+  schedule:
+    - cron: '0 2 * * *'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      # ===== STEP 1: Auto-fix all canonical URLs =====
+      - name: Auto-fix canonical URLs
+        run: |
+          echo "🔧 Fixing canonical URLs in all HTML files..."
+          
+          # Fix wrong domain in all HTML files
+          find . -name "*.html" -type f -exec sed -i 's|olympiashouseboats\.com|olympiasathena.com|g' {} +
+          
+          # Fix index.html OG URL specifically
+          if [ -f "index.html" ]; then
+            sed -i 's|<meta property="og:url" content="https://olympiashouseboats.com/"|<meta property="og:url" content="https://olympiasathena.com/"|g' index.html
+          fi
+          
+          echo "✅ Canonical URLs fixed"
+      
+      # ===== STEP 2: Auto-inject partial.js into all pages =====
+      - name: Auto-inject footer script
+        run: |
+          echo "💉 Injecting partial.js into all HTML files..."
+          
+          cat > inject-footer.js << 'INJECT_SCRIPT'
+          const fs = require('fs');
+          const path = require('path');
+          
+          const SCRIPT_TAG = '<script src="partial.js"></script>';
+          const EXCLUDE = ['all-pages.html'];
+          
+          function findHtmlFiles(dir) {
+            const files = fs.readdirSync(dir);
+            return files.filter(f => 
+              f.endsWith('.html') && 
+              !EXCLUDE.includes(f) &&
+              !f.includes('FIXED') &&
+              !f.startsWith('.')
+            );
+          }
+          
+          function injectScript(content) {
+            if (content.includes('partial.js')) return content;
+            if (content.includes('</body>')) {
+              return content.replace('</body>', `  ${SCRIPT_TAG}\n</body>`);
+            }
+            return content + `\n${SCRIPT_TAG}\n`;
+          }
+          
+          const files = findHtmlFiles('.');
+          let count = 0;
+          
+          files.forEach(file => {
+            let content = fs.readFileSync(file, 'utf-8');
+            if (!content.includes('partial.js')) {
+              content = injectScript(content);
+              fs.writeFileSync(file, content, 'utf-8');
+              console.log('✅ Injected:', file);
+              count++;
+            }
+          });
+          
+          console.log('📊 Total injected:', count, 'files');
+          INJECT_SCRIPT
+          
+          node inject-footer.js
+          echo "✅ Footer script injected"
+      
+      # ===== STEP 3: Generate sitemap from registry =====
+      - name: Generate sitemap
+        run: |
+          echo "🗺️  Generating sitemap.xml..."
+          
+          cat > generate-sitemap.js << 'SITEMAP_SCRIPT'
+          const fs = require('fs');
+          
+          // Read pages registry
+          let pages = [];
+          try {
+            pages = JSON.parse(fs.readFileSync('pages-registry.json', 'utf-8'));
+          } catch (e) {
+            console.warn('⚠️  No pages-registry.json found, scanning HTML files...');
+            
+            // Fallback: scan HTML files
+            const files = fs.readdirSync('.')
+              .filter(f => f.endsWith('.html') && !f.includes('FIXED'));
+            
+            pages = files.map(file => ({
+              url: file,
+              title: file.replace('.html', '').replace(/-/g, ' '),
+              priority: file === 'index.html' ? 1.0 : 0.5,
+              lastModified: new Date().toISOString().split('T')[0]
+            }));
+          }
+          
+          const domain = 'https://olympiasathena.com';
+          let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
+          xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+          
+          pages.forEach(page => {
+            const url = page.url.startsWith('/') ? page.url : `/${page.url}`;
+            const loc = url === '/index.html' ? domain + '/' : domain + url;
+            const lastmod = page.lastModified || new Date().toISOString().split('T')[0];
+            const priority = page.priority || 0.5;
+            const changefreq = priority >= 0.9 ? 'daily' : priority >= 0.7 ? 'weekly' : 'monthly';
+            
+            xml += '  <url>\n';
+            xml += `    <loc>${loc}</loc>\n`;
+            xml += `    <lastmod>${lastmod}</lastmod>\n`;
+            xml += `    <changefreq>${changefreq}</changefreq>\n`;
+            xml += `    <priority>${priority.toFixed(1)}</priority>\n`;
+            xml += '  </url>\n';
+          });
+          
+          xml += '</urlset>';
+          fs.writeFileSync('sitemap.xml', xml, 'utf-8');
+          console.log(`✅ Sitemap generated with ${pages.length} pages`);
+          SITEMAP_SCRIPT
+          
+          node generate-sitemap.js
+          echo "✅ Sitemap generated"
+      
+      # ===== STEP 4: Create robots.txt =====
+      - name: Generate robots.txt
+        run: |
+          echo "🤖 Creating robots.txt..."
+          
+          cat > robots.txt << 'ROBOTS'
+          User-agent: *
+          Allow: /
+          
+          Sitemap: https://olympiasathena.com/sitemap.xml
+          ROBOTS
+          
+          echo "✅ robots.txt created"
+      
+      # ===== STEP 5: Deploy to GitHub Pages =====
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: .
+          publish_branch: gh-pages
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: '🚀 Auto-deploy [skip ci]'
+      
+      # ===== STEP 6: Ping search engines =====
+      - name: Ping search engines
+        run: |
+          echo "📡 Notifying search engines..."
+          
+          # Ping Google
+          curl -s "https://www.google.com/ping?sitemap=https://olympiasathena.com/sitemap.xml" || true
+          echo "✅ Pinged Google"
+          
+          # Ping Bing
+          curl -s "https://www.bing.com/ping?sitemap=https://olympiasathena.com/sitemap.xml" || true
+          echo "✅ Pinged Bing"
+      
+      # ===== SUMMARY =====
+      - name: Deployment summary
+        run: |
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo "🎉 DEPLOYMENT COMPLETE!"
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+          echo ""
+          echo "✅ Canonical URLs auto-fixed"
+          echo "✅ Footer script auto-injected"
+          echo "✅ Sitemap auto-generated"
+          echo "✅ robots.txt created"
+          echo "✅ Deployed to GitHub Pages"
+          echo "✅ Search engines notified"
+          echo ""
+          echo "🌐 Your site: https://olympiasathena.com"
+          echo "🗺️  Sitemap: https://olympiasathena.com/sitemap.xml"
+          echo ""
+          echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
