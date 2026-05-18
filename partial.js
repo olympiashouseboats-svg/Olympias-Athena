@@ -89,32 +89,21 @@
 
   // ===== CATEGORIZE PAGES =====
   function categorizePages(pages) {
-    const categories = {
-      main: [],
-      destinations: [],
-      services: [],
-      business: [],
-      latest: [],
-      legal: []
-    };
+    const categories = {};
 
+    // Group pages by their category
     pages.forEach(page => {
-      const cat = page.category || 'main';
-      if (categories[cat]) {
-        categories[cat].push(page);
+      const cat = page.category || 'other';
+      if (!categories[cat]) {
+        categories[cat] = [];
       }
+      categories[cat].push(page);
     });
 
-    // Sort by priority
+    // Sort each category by priority
     Object.keys(categories).forEach(key => {
       categories[key].sort((a, b) => (b.priority || 0.5) - (a.priority || 0.5));
     });
-
-    // Get latest pages (sort by lastModified if available)
-    categories.latest = [...pages]
-      .filter(p => p.lastModified)
-      .sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified))
-      .slice(0, 5);
 
     return categories;
   }
@@ -123,15 +112,76 @@
   function buildFooterHTML(categories) {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     
-    const mainLinks = categories.main.slice(0, CONFIG.MAX_CATEGORY_LINKS);
-    const destinationLinks = categories.destinations.slice(0, CONFIG.MAX_CATEGORY_LINKS);
-    const serviceLinks = categories.services.slice(0, CONFIG.MAX_CATEGORY_LINKS);
-    const latestLinks = categories.latest.slice(0, 5);
-    const legalLinks = categories.legal;
+    // Category display names
+    const categoryNames = {
+      'main': 'Quick Links',
+      'destinations': 'Top Destinations',
+      'services': 'Our Services',
+      'business': 'Business Pages',
+      'legal': 'Legal & Policies',
+      'tours': 'Tour Packages',
+      'activities': 'Activities',
+      'hotels': 'Hotels',
+      'transport': 'Transport Services'
+    };
+
+    function getCategoryTitle(cat) {
+      // If custom name exists, use it
+      if (categoryNames[cat]) return categoryNames[cat];
+      // Otherwise capitalize category name
+      return cat.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+    }
 
     function createLink(page) {
       const isActive = currentPath === page.url ? ' class="active"' : '';
       return `<a href="${page.url}"${isActive}>${page.title}</a>`;
+    }
+
+    // Build footer sections dynamically
+    let footerSections = '';
+    
+    // Always show main/quick links first
+    if (categories.main && categories.main.length > 0) {
+      const links = categories.main.slice(0, CONFIG.MAX_CATEGORY_LINKS);
+      footerSections += `
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <nav class="footer-links">
+            ${links.map(createLink).join('')}
+          </nav>
+        </div>
+      `;
+    }
+
+    // Show other categories (exclude main and legal)
+    Object.keys(categories)
+      .filter(cat => cat !== 'main' && cat !== 'legal' && categories[cat].length > 0)
+      .slice(0, 3) // Max 3 additional sections
+      .forEach(cat => {
+        const links = categories[cat].slice(0, CONFIG.MAX_CATEGORY_LINKS);
+        footerSections += `
+          <div class="footer-col">
+            <h3 class="footer-heading">${getCategoryTitle(cat)}</h3>
+            <nav class="footer-links">
+              ${links.map(createLink).join('')}
+            </nav>
+          </div>
+        `;
+      });
+
+    // Always show legal section last
+    if (categories.legal && categories.legal.length > 0) {
+      footerSections += `
+        <div class="footer-col">
+          <h3 class="footer-heading">Legal & More</h3>
+          <nav class="footer-links">
+            ${categories.legal.map(createLink).join('')}
+            <a href="all-pages.html"><strong>📄 View All Pages</strong></a>
+          </nav>
+        </div>
+      `;
     }
 
     const footerHTML = `
@@ -159,52 +209,7 @@
           </div>
         </div>
 
-        <!-- Quick Links -->
-        <div class="footer-col">
-          <h3 class="footer-heading">Quick Links</h3>
-          <nav class="footer-links">
-            ${mainLinks.map(createLink).join('')}
-          </nav>
-        </div>
-
-        <!-- Destinations (if available) -->
-        ${destinationLinks.length > 0 ? `
-        <div class="footer-col">
-          <h3 class="footer-heading">Destinations</h3>
-          <nav class="footer-links">
-            ${destinationLinks.map(createLink).join('')}
-          </nav>
-        </div>
-        ` : ''}
-
-        <!-- Services (if available) -->
-        ${serviceLinks.length > 0 ? `
-        <div class="footer-col">
-          <h3 class="footer-heading">Our Services</h3>
-          <nav class="footer-links">
-            ${serviceLinks.map(createLink).join('')}
-          </nav>
-        </div>
-        ` : ''}
-
-        <!-- Latest Pages (if available) -->
-        ${latestLinks.length > 0 ? `
-        <div class="footer-col">
-          <h3 class="footer-heading">Recently Added</h3>
-          <nav class="footer-links">
-            ${latestLinks.map(createLink).join('')}
-          </nav>
-        </div>
-        ` : ''}
-
-        <!-- Legal & All Pages -->
-        <div class="footer-col">
-          <h3 class="footer-heading">Legal & More</h3>
-          <nav class="footer-links">
-            ${legalLinks.map(createLink).join('')}
-            <a href="all-pages.html"><strong>📄 View All Pages</strong></a>
-          </nav>
-        </div>
+        ${footerSections}
 
       </div>
 
