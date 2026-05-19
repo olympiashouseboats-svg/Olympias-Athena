@@ -191,42 +191,117 @@
   </style>
 
 
-  <!-- ===== ABOUT STRIP ===== -->
-  <section style="background:var(--walnut);">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center;">
-        <div class="reveal-left">
-          <div style="position:relative;">
-            <div style="position:absolute;top:-1rem;left:-1rem;width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:1.5rem;z-index:1;">⚓</div>
-            <img src="https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765810/DSC_0045_oxenpq.jpg"
-              alt="Olympias Athena Group of Houseboats on Dal Lake Srinagar Kashmir"
-              width="600" height="450" loading="lazy"
-              style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px;box-shadow:0 20px 60px rgba(59,31,10,.25);"
-              itemprop="image" />
-            <img src="https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765511/DSC_0001_1_fdlbjv.jpg"
-              alt="Luxury room interior Olympias Athena Group of Houseboats"
-              width="260" height="260" loading="lazy"
-              style="position:absolute;bottom:-1.8rem;right:-1.4rem;width:42%;aspect-ratio:1;object-fit:cover;border-radius:2px;border:4px solid var(--walnut);box-shadow:0 12px 35px rgba(59,31,10,.3);" />
+ <!-- ===== ABOUT STRIP ===== -->
+<section style="background:var(--walnut);overflow:hidden;">
+  <div class="container">
+
+    <div id="about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,5rem);align-items:center;">
+
+      <!-- IMAGES -->
+      <div class="reveal-left about-images">
+        <div style="position:relative;max-width:100%;">
+
+          <div style="position:absolute;top:-1rem;left:-1rem;width:56px;height:56px;background:linear-gradient(135deg,var(--gold),var(--gold-light));display:flex;align-items:center;justify-content:center;font-size:1.5rem;z-index:2;">
+            ⚓
           </div>
-        </div>
-        <div class="reveal-right" style="padding:1.5rem 0;">
-          <div class="section-label" style="color:var(--gold-light);">Our Story · Dal Lake, Srinagar</div>
-          <h2 class="section-heading light">Where Luxury Meets the <em>Heart of Kashmir</em></h2>
-          <div class="gold-line"></div>
-          <p class="section-body light" itemprop="description">Nestled on the serene waters of Dal Lake at Ghat No.&nbsp;13, Boulevard Road, <strong style="color:var(--gold-light);">Olympias Athena Group of Houseboats</strong> offers an unparalleled blend of traditional Kashmiri craftsmanship and modern luxury. Our houseboats are floating palaces — hand-crafted with intricate walnut woodwork, offering breathtaking views of the Zabarwan Mountains and the shimmering lake.</p>
-          <p class="section-body light" style="margin-top:.9rem;">Whether you are a couple seeking a romantic retreat, a family looking for an authentic Kashmir houseboat experience, or a solo traveller wishing to immerse in the valley's timeless beauty — we welcome you with warm hospitality and unforgettable memories.</p>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;">
-            <div style="display:flex;gap:10px;align-items:flex-start;"><div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🏔️</div><div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;"><strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Mountain &amp; Lake Views</strong>Zabarwan &amp; Himalayan vistas</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;"><div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🍽️</div><div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;"><strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Authentic Kashmiri Meals</strong>Traditional cuisine on request</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;"><div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🛶</div><div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;"><strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Shikara Boat Access</strong>Dal Lake rides at doorstep</div></div>
-            <div style="display:flex;gap:10px;align-items:flex-start;"><div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🌟</div><div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;"><strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Warm Kashmiri Hospitality</strong>Personalised guest care</div></div>
-          </div>
-          <div style="margin-top:2rem;"><a href="about.html" class="btn btn-gold">Our Full Story →</a></div>
+
+          <img
+            src="https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765810/DSC_0045_oxenpq.jpg"
+            alt="Olympias Athena Group of Houseboats on Dal Lake Srinagar Kashmir"
+            width="600"
+            height="450"
+            loading="lazy"
+            itemprop="image"
+            class="main-about-img"
+          />
+
+          <img
+            src="https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765511/DSC_0001_1_fdlbjv.jpg"
+            alt="Luxury room interior Olympias Athena Group of Houseboats"
+            width="260"
+            height="260"
+            loading="lazy"
+            class="small-about-img"
+          />
+
         </div>
       </div>
+
+      <!-- CONTENT -->
+      <div class="reveal-right" style="padding:1.5rem 0;">
+
+        <div class="section-label" style="color:var(--gold-light);">
+          Our Story · Dal Lake, Srinagar
+        </div>
+
+        <h2 class="section-heading light">
+          Where Luxury Meets the <em>Heart of Kashmir</em>
+        </h2>
+
+        <div class="gold-line"></div>
+
+        <p class="section-body light" itemprop="description">
+          Nestled on the serene waters of Dal Lake at Ghat No.&nbsp;13,
+          Boulevard Road,
+          <strong style="color:var(--gold-light);">
+            Olympias Athena Group of Houseboats
+          </strong>
+          offers an unparalleled blend of traditional Kashmiri craftsmanship
+          and modern luxury.
+        </p>
+
+        <p class="section-body light" style="margin-top:.9rem;">
+          Whether you are a couple seeking a romantic retreat, a family looking
+          for an authentic Kashmir houseboat experience, or a solo traveller
+          wishing to immerse in the valley's timeless beauty.
+        </p>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem;">
+
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🏔️</div>
+            <div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;">
+              <strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Mountain & Lake Views</strong>
+              Zabarwan & Himalayan vistas
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🍽️</div>
+            <div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;">
+              <strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Authentic Kashmiri Meals</strong>
+              Traditional cuisine on request
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🛶</div>
+            <div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;">
+              <strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Shikara Boat Access</strong>
+              Dal Lake rides at doorstep
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px;align-items:flex-start;">
+            <div style="width:36px;height:36px;background:rgba(200,150,62,.15);border:1px solid rgba(200,150,62,.3);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🌟</div>
+            <div style="font-size:.84rem;color:rgba(248,241,228,.78);line-height:1.5;">
+              <strong style="display:block;color:var(--gold-light);font-weight:500;font-size:.78rem;">Warm Kashmiri Hospitality</strong>
+              Personalised guest care
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="about.html" class="btn btn-gold">
+            Our Full Story →
+          </a>
+        </div>
+
+      </div>
     </div>
-  </section>
-  <style>@media(max-width:768px){#about-grid{grid-template-columns:1fr!important}}</style>
+  </div>
+</section>
 
 
   <!-- ===== SERVICES PREVIEW ===== -->
