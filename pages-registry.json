@@ -62,14 +62,45 @@
     "priority": 0.3,
     "lastModified": "2026-05-18",
     "description": "Privacy policy and data protection"
-  }
+  },
   {
-  "url": "best-houseboat-dal-lake-srinagar.html",
-  "title": "Houseboat stay in kashmir",
-  "description": "Explore beautiful houseboat view",
-  "category": "destinations",
-  "priority": 0.8,
-  "lastModified": "2026-05-21"
-}
-]
+    "url": "best-houseboats-srinagar-dal-lake.html",
+    "title": "Best Houseboats in Srinagar Dal Lake 2026",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Complete guide to the best houseboats in Srinagar Dal Lake featuring Olympias Athena luxury stays"
+  },
+  {
+    "url": "olympias-athena-houseboats-guide.html",
+    "title": "Olympias Athena Houseboats Complete Guide",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Everything you need to know about Olympias Athena Houseboats Dal Lake Srinagar"
+  },
+  {
+    "url": "best-houseboats-jammu-kashmir.html",
+    "title": "Best Houseboats in Jammu & Kashmir 2026",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Ultimate guide to the best houseboat accommodations in Jammu & Kashmir region"
+  },
+  {
+    "url": "luxury-houseboat-stay-dal-lake-srinagar.html",
+    "title": "Luxury Houseboat Stay Dal Lake Srinagar",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Experience luxury houseboat living on Dal Lake with premium rooms and authentic Kashmiri hospitality"
+  },
+  {
+    "url": "kashmir-houseboat-booking-guide.html",
+    "title": "Kashmir Houseboat Booking Guide 2026",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Complete guide to booking Kashmir houseboats safely with tips, prices, seasons and what to expect"
+  }
 ]
