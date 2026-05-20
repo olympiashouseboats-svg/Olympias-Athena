@@ -23,46 +23,6 @@
     "lastModified": "2026-05-18",
     "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
   },
-   {
-    "url": "services.html",
-    "title": "Luxury Room Stay",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-   {
-    "url": "services.html",
-    "title": "Stay with Meals",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-   {
-    "url": "services.html",
-    "title": "Couple Rooms",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-   {
-    "url": "services.html",
-    "title": "Tourist Family Rooms",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-   {
-    "url": "services.html",
-    "title": "Dal Lake Experience",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
   {
     "url": "rooms.html",
     "title": "Rooms",
@@ -142,5 +102,37 @@
     "priority": 0.9,
     "lastModified": "2026-05-18",
     "description": "Complete guide to booking Kashmir houseboats safely with tips, prices, seasons and what to expect"
+  },
+  {
+    "url": "why-olympias-athena-best-houseboat-dal-lake.html",
+    "title": "Why Olympias Athena is the Best Houseboat",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Discover why Olympias Athena stands out as the best houseboat on Dal Lake with guest reviews and competitive advantages"
+  },
+  {
+    "url": "how-dal-lake-houseboats-are-made.html",
+    "title": "How Dal Lake Houseboats Are Made",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Fascinating guide to traditional Kashmir houseboat construction methods and master craftsmanship"
+  },
+  {
+    "url": "dal-lake-shikara-ride-experience-guide.html",
+    "title": "Dal Lake Shikara Ride Experience Guide",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Complete guide to Shikara rides on Dal Lake with best timings, routes and complimentary rides at Olympias Athena"
+  },
+  {
+    "url": "dal-lake-houseboat-experience-guide.html",
+    "title": "Dal Lake Houseboat Experience Guide",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Complete first-timer's guide to experiencing life on Dal Lake houseboats with practical tips and what to expect"
   }
 ]
