@@ -24,6 +24,62 @@
     "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
   },
   {
+    "url": "services.html",
+    "title": "Luxury Room Stay",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "services.html",
+    "title": "Couple Rooms",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "services.html",
+    "title": "Tourist Family Rooms",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "services.html",
+    "title": "Local Stay Rooms",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "services.html",
+    "title": "Stay with Meals",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "services.html",
+    "title": "Stay without Meals",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "services.html",
+    "title": "Group Booking",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
     "url": "rooms.html",
     "title": "Rooms",
     "category": "main",
