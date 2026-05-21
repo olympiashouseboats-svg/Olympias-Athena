@@ -190,5 +190,37 @@
     "priority": 0.9,
     "lastModified": "2026-05-18",
     "description": "Complete first-timer's guide to experiencing life on Dal Lake houseboats with practical tips and what to expect"
+  },
+    {
+    "url": "houseboats-in-kashmir.html",
+    "title": "Houseboats in Kashmir",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-20",
+    "description": "Complete guide to Kashmir houseboats"
+  },
+  {
+    "url": "olympias-athena.html",
+    "title": "Olympias Athena",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-20",
+    "description": "About our two houseboats"
+  },
+  {
+    "url": "olympias-houseboat.html",
+    "title": "Olympias Houseboat",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-20",
+    "description": "Olympias houseboat details"
+  },
+  {
+    "url": "athena-houseboat.html",
+    "title": "Athena Houseboat",
+    "category": "blog",
+    "priority": 0.9,
+    "lastModified": "2026-05-20",
+    "description": "Athena houseboat details"
   }
 ]
