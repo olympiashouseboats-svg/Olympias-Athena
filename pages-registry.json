@@ -222,5 +222,61 @@
     "priority": 0.9,
     "lastModified": "2026-05-20",
     "description": "Athena houseboat details"
+  },
+  {
+    "url": "srinagar.html",
+    "title": "About Srinagar",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-24",
+    "description": "Athena houseboat details"
+  },
+{
+    "url": "about-dal-lake.html",
+    "title": "About Dal lake",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-24",
+    "description": "Athena houseboat details"
+  },
+  {
+    "url": "nishat-garden-srinagar.html",
+    "title": "About Nishat Garden",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-24",
+    "description": "Athena houseboat details"
+  },
+  {
+    "url": "tulip-garden-srinagar.html",
+    "title": "About Tulip Garden",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-24",
+    "description": "Athena houseboat details"
+  },
+  {
+    "url": "botanical-garden-srinagar.html",
+    "title": "About Botanical Garden",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-24",
+    "description": "Athena houseboat details"
+  },
+  {
+    "url": "shalimar-garden-srinagar.html",
+    "title": "About Shalimar Garden",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-24",
+    "description": "Athena houseboat details"
+  },
+  {
+    "url": "mughal-gardens-srinagar.html",
+    "title": "About Mughal Gardens",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-24",
+    "description": "Athena houseboat details"
   }
 ]
