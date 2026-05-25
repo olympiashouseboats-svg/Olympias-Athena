@@ -4,7 +4,7 @@
     "title": "Home",
     "category": "main",
     "priority": 1.0,
-    "lastModified": "2026-05-18",
+    "lastModified": "2026-05-21",
     "description": "Luxury houseboat stay on Dal Lake, Srinagar, Kashmir"
   },
   {
@@ -12,191 +12,135 @@
     "title": "About Us",
     "category": "main",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Learn about Olympias Athena Group of Houseboats and our story"
+    "lastModified": "2026-05-21",
+    "description": "Learn about Olympias Athena Group of Houseboats"
   },
   {
     "url": "services.html",
     "title": "Services",
-    "category": "services",
+    "category": "main",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-  {
-    "url": "services.html",
-    "title": "Luxury Room Stay",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-  {
-    "url": "services.html",
-    "title": "Couple Rooms",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-  {
-    "url": "services.html",
-    "title": "Tourist Family Rooms",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-  {
-    "url": "services.html",
-    "title": "Local Stay Rooms",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-  {
-    "url": "services.html",
-    "title": "Stay with Meals",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-  {
-    "url": "services.html",
-    "title": "Stay without Meals",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
-  },
-  {
-    "url": "services.html",
-    "title": "Group Booking",
-    "category": "services",
-    "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+    "lastModified": "2026-05-21",
+    "description": "Premium houseboat services"
   },
   {
     "url": "rooms.html",
     "title": "Rooms",
     "category": "main",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Explore our luxury houseboat rooms with Dal Lake views"
+    "lastModified": "2026-05-21",
+    "description": "Luxury houseboat rooms with Dal Lake views"
   },
   {
     "url": "gallery.html",
     "title": "Gallery",
     "category": "main",
     "priority": 0.8,
-    "lastModified": "2026-05-18",
-    "description": "Photo gallery of our houseboats, rooms, and Dal Lake scenery"
+    "lastModified": "2026-05-21",
+    "description": "Photo gallery"
   },
   {
     "url": "contact.html",
     "title": "Contact",
     "category": "main",
     "priority": 0.8,
-    "lastModified": "2026-05-18",
-    "description": "Get in touch for bookings and enquiries"
+    "lastModified": "2026-05-21",
+    "description": "Get in touch for bookings"
   },
   {
     "url": "terms.html",
-    "title": "Terms & Conditions",
-    "category": "legal",
+    "title": "Terms",
+    "category": "main",
     "priority": 0.3,
-    "lastModified": "2026-05-18",
-    "description": "Terms and conditions for booking"
+    "lastModified": "2026-05-21",
+    "description": "Terms and conditions"
   },
   {
     "url": "privacy.html",
-    "title": "Privacy Policy",
-    "category": "legal",
+    "title": "Privacy",
+    "category": "main",
     "priority": 0.3,
-    "lastModified": "2026-05-18",
-    "description": "Privacy policy and data protection"
+    "lastModified": "2026-05-21",
+    "description": "Privacy policy"
   },
   {
     "url": "best-houseboats-srinagar-dal-lake.html",
-    "title": "Best Houseboats in Srinagar Dal Lake 2026",
-    "category": "blog",
+    "title": "Best Houseboats Srinagar",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Complete guide to the best houseboats in Srinagar Dal Lake featuring Olympias Athena luxury stays"
+    "lastModified": "2026-05-21",
+    "description": "Best houseboats in Srinagar Dal Lake"
   },
   {
     "url": "olympias-athena-houseboats-guide.html",
-    "title": "Olympias Athena Houseboats Complete Guide",
-    "category": "blog",
+    "title": "Olympias Athena Guide",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Everything you need to know about Olympias Athena Houseboats Dal Lake Srinagar"
+    "lastModified": "2026-05-21",
+    "description": "Complete guide to Olympias Athena"
   },
   {
     "url": "best-houseboats-jammu-kashmir.html",
-    "title": "Best Houseboats in Jammu & Kashmir 2026",
-    "category": "blog",
+    "title": "Best Houseboats J&K",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Ultimate guide to the best houseboat accommodations in Jammu & Kashmir region"
+    "lastModified": "2026-05-21",
+    "description": "Best houseboats in Jammu Kashmir"
   },
   {
     "url": "luxury-houseboat-stay-dal-lake-srinagar.html",
-    "title": "Luxury Houseboat Stay Dal Lake Srinagar",
-    "category": "blog",
+    "title": "Luxury Houseboat Stay",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Experience luxury houseboat living on Dal Lake with premium rooms and authentic Kashmiri hospitality"
+    "lastModified": "2026-05-21",
+    "description": "Luxury houseboat experience"
   },
   {
     "url": "kashmir-houseboat-booking-guide.html",
-    "title": "Kashmir Houseboat Booking Guide 2026",
-    "category": "blog",
+    "title": "Houseboat Booking Guide",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Complete guide to booking Kashmir houseboats safely with tips, prices, seasons and what to expect"
+    "lastModified": "2026-05-21",
+    "description": "How to book Kashmir houseboats"
   },
   {
     "url": "why-olympias-athena-best-houseboat-dal-lake.html",
-    "title": "Why Olympias Athena are the Best Houseboat",
-    "category": "blog",
+    "title": "Why Olympias Athena Best",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Discover why Olympias Athena stands out as the best houseboat on Dal Lake with guest reviews and competitive advantages"
+    "lastModified": "2026-05-21",
+    "description": "Why we're the best houseboat"
   },
   {
     "url": "how-dal-lake-houseboats-are-made.html",
-    "title": "How Dal Lake Houseboats Are Made",
-    "category": "blog",
+    "title": "How Houseboats Made",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Fascinating guide to traditional Kashmir houseboat construction methods and master craftsmanship"
+    "lastModified": "2026-05-21",
+    "description": "Traditional houseboat construction"
   },
   {
     "url": "dal-lake-shikara-ride-experience-guide.html",
-    "title": "Dal Lake Shikara Ride Experience Guide",
-    "category": "blog",
+    "title": "Shikara Ride Guide",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Complete guide to Shikara rides on Dal Lake with best timings, routes and complimentary rides at Olympias Athena"
+    "lastModified": "2026-05-21",
+    "description": "Complete Shikara ride experience"
   },
   {
     "url": "dal-lake-houseboat-experience-guide.html",
-    "title": "Dal Lake Houseboat Experience Guide",
-    "category": "blog",
+    "title": "Houseboat Experience",
+    "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-18",
-    "description": "Complete first-timer's guide to experiencing life on Dal Lake houseboats with practical tips and what to expect"
+    "lastModified": "2026-05-21",
+    "description": "What to expect on houseboats"
   },
-    {
+  {
     "url": "houseboats-in-kashmir.html",
     "title": "Houseboats in Kashmir",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-20",
+    "lastModified": "2026-05-21",
     "description": "Complete guide to Kashmir houseboats"
   },
   {
@@ -204,7 +148,7 @@
     "title": "Olympias Athena",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-20",
+    "lastModified": "2026-05-21",
     "description": "About our two houseboats"
   },
   {
@@ -212,7 +156,7 @@
     "title": "Olympias Houseboat",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-20",
+    "lastModified": "2026-05-21",
     "description": "Olympias houseboat details"
   },
   {
@@ -220,63 +164,63 @@
     "title": "Athena Houseboat",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-20",
+    "lastModified": "2026-05-21",
     "description": "Athena houseboat details"
   },
   {
     "url": "srinagar.html",
-    "title": "About Srinagar",
+    "title": "Srinagar Guide",
     "category": "srinagar",
-    "priority": 0.9,
-    "lastModified": "2026-05-24",
-    "description": "Athena houseboat details"
+    "priority": 1.0,
+    "lastModified": "2026-05-21",
+    "description": "Complete Srinagar travel guide"
   },
-{
+  {
     "url": "about-dal-lake.html",
-    "title": "About Dal lake",
+    "title": "About Dal Lake",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-24",
-    "description": "Athena houseboat details"
+    "lastModified": "2026-05-21",
+    "description": "Complete Dal Lake guide"
   },
   {
     "url": "nishat-garden-srinagar.html",
-    "title": "About Nishat Garden",
+    "title": "Nishat Garden",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-24",
-    "description": "Athena houseboat details"
-  },
-  {
-    "url": "tulip-garden-srinagar.html",
-    "title": "About Tulip Garden",
-    "category": "srinagar",
-    "priority": 0.9,
-    "lastModified": "2026-05-24",
-    "description": "Athena houseboat details"
-  },
-  {
-    "url": "botanical-garden-srinagar.html",
-    "title": "About Botanical Garden",
-    "category": "srinagar",
-    "priority": 0.9,
-    "lastModified": "2026-05-24",
-    "description": "Athena houseboat details"
+    "lastModified": "2026-05-21",
+    "description": "Nishat Bagh garden guide"
   },
   {
     "url": "shalimar-garden-srinagar.html",
-    "title": "About Shalimar Garden",
+    "title": "Shalimar Garden",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-24",
-    "description": "Athena houseboat details"
+    "lastModified": "2026-05-21",
+    "description": "Shalimar Bagh garden guide"
   },
   {
     "url": "mughal-gardens-srinagar.html",
-    "title": "About Mughal Gardens",
+    "title": "Mughal Gardens",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-24",
-    "description": "Athena houseboat details"
+    "lastModified": "2026-05-21",
+    "description": "Complete Mughal gardens guide"
+  },
+  {
+    "url": "tulip-garden-srinagar.html",
+    "title": "Tulip Garden",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-21",
+    "description": "Tulip festival garden guide"
+  },
+  {
+    "url": "botanical-garden-srinagar.html",
+    "title": "Botanical Garden",
+    "category": "srinagar",
+    "priority": 0.9,
+    "lastModified": "2026-05-21",
+    "description": "Botanical garden Srinagar"
   }
 ]
