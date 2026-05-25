@@ -122,8 +122,10 @@
       'tours': 'Tour Packages',
       'activities': 'Activities',
       'hotels': 'Hotels',
-      'transport': 'Transport Services'
-      'blog': 'Blog'
+      'transport': 'Transport Services',
+      'blog': 'Blog',
+      'houseboats': 'Houseboats'
+       
     };
 
     function getCategoryTitle(cat) {
