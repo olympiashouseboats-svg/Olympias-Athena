@@ -2,225 +2,197 @@
   {
     "url": "index.html",
     "title": "Home",
-    "category": "main",
+    "category": "quick-links",
     "priority": 1.0,
-    "lastModified": "2026-05-21",
-    "description": "Luxury houseboat stay on Dal Lake, Srinagar, Kashmir"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "about.html",
     "title": "About Us",
-    "category": "main",
+    "category": "quick-links",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Learn about Olympias Athena Group of Houseboats"
-  },
-  {
-    "url": "services.html",
-    "title": "Services",
-    "category": "main",
-    "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Premium houseboat services"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "rooms.html",
     "title": "Rooms",
-    "category": "main",
+    "category": "quick-links",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Luxury houseboat rooms with Dal Lake views"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "gallery.html",
     "title": "Gallery",
-    "category": "main",
+    "category": "quick-links",
     "priority": 0.8,
-    "lastModified": "2026-05-21",
-    "description": "Photo gallery"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "contact.html",
     "title": "Contact",
-    "category": "main",
+    "category": "quick-links",
     "priority": 0.8,
-    "lastModified": "2026-05-21",
-    "description": "Get in touch for bookings"
+    "lastModified": "2026-05-21"
   },
   {
-    "url": "terms.html",
-    "title": "Terms",
-    "category": "main",
-    "priority": 0.3,
-    "lastModified": "2026-05-21",
-    "description": "Terms and conditions"
-  },
-  {
-    "url": "privacy.html",
-    "title": "Privacy",
-    "category": "main",
-    "priority": 0.3,
-    "lastModified": "2026-05-21",
-    "description": "Privacy policy"
+    "url": "services.html",
+    "title": "Services",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-21"
   },
   {
     "url": "best-houseboats-srinagar-dal-lake.html",
-    "title": "Best Houseboats Srinagar",
-    "category": "houseboats",
+    "title": "Best Houseboats in Srinagar Dal Lake 2026",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Best houseboats in Srinagar Dal Lake"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "olympias-athena-houseboats-guide.html",
-    "title": "Olympias Athena Guide",
-    "category": "houseboats",
+    "title": "Olympias Athena Houseboats Complete Guide",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Complete guide to Olympias Athena"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "best-houseboats-jammu-kashmir.html",
-    "title": "Best Houseboats J&K",
-    "category": "houseboats",
+    "title": "Best Houseboats in Jammu & Kashmir 2026",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Best houseboats in Jammu Kashmir"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "luxury-houseboat-stay-dal-lake-srinagar.html",
-    "title": "Luxury Houseboat Stay",
-    "category": "houseboats",
+    "title": "Luxury Houseboat Stay Dal Lake Srinagar",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Luxury houseboat experience"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "kashmir-houseboat-booking-guide.html",
-    "title": "Houseboat Booking Guide",
-    "category": "houseboats",
+    "title": "Kashmir Houseboat Booking Guide 2026",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "How to book Kashmir houseboats"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "why-olympias-athena-best-houseboat-dal-lake.html",
-    "title": "Why Olympias Athena Best",
-    "category": "houseboats",
+    "title": "Why Olympias Athena Best Houseboat",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Why we're the best houseboat"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "how-dal-lake-houseboats-are-made.html",
-    "title": "How Houseboats Made",
-    "category": "houseboats",
+    "title": "How Dal Lake Houseboats Made",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Traditional houseboat construction"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "dal-lake-shikara-ride-experience-guide.html",
-    "title": "Shikara Ride Guide",
-    "category": "houseboats",
+    "title": "Dal Lake Shikara Ride Experience Guide",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Complete Shikara ride experience"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "dal-lake-houseboat-experience-guide.html",
-    "title": "Houseboat Experience",
-    "category": "houseboats",
+    "title": "Dal Lake Houseboat Experience Guide",
+    "category": "blog",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "What to expect on houseboats"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "houseboats-in-kashmir.html",
     "title": "Houseboats in Kashmir",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Complete guide to Kashmir houseboats"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "olympias-athena.html",
     "title": "Olympias Athena",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "About our two houseboats"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "olympias-houseboat.html",
     "title": "Olympias Houseboat",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Olympias houseboat details"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "athena-houseboat.html",
     "title": "Athena Houseboat",
     "category": "houseboats",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Athena houseboat details"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "srinagar.html",
-    "title": "Srinagar Guide",
+    "title": "Srinagar Tourism Guide",
     "category": "srinagar",
     "priority": 1.0,
-    "lastModified": "2026-05-21",
-    "description": "Complete Srinagar travel guide"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "about-dal-lake.html",
     "title": "About Dal Lake",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Complete Dal Lake guide"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "nishat-garden-srinagar.html",
     "title": "Nishat Garden",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Nishat Bagh garden guide"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "shalimar-garden-srinagar.html",
     "title": "Shalimar Garden",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Shalimar Bagh garden guide"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "mughal-gardens-srinagar.html",
     "title": "Mughal Gardens",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Complete Mughal gardens guide"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "tulip-garden-srinagar.html",
     "title": "Tulip Garden",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Tulip festival garden guide"
+    "lastModified": "2026-05-21"
   },
   {
     "url": "botanical-garden-srinagar.html",
     "title": "Botanical Garden",
     "category": "srinagar",
     "priority": 0.9,
-    "lastModified": "2026-05-21",
-    "description": "Botanical garden Srinagar"
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "terms.html",
+    "title": "Terms & Conditions",
+    "category": "legal",
+    "priority": 0.3,
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "privacy.html",
+    "title": "Privacy Policy",
+    "category": "legal",
+    "priority": 0.3,
+    "lastModified": "2026-05-21"
   }
 ]
