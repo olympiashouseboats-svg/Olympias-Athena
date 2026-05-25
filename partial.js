@@ -123,6 +123,7 @@
       'activities': 'Activities',
       'hotels': 'Hotels',
       'transport': 'Transport Services'
+      'blog': 'Blog'
     };
 
     function getCategoryTitle(cat) {
