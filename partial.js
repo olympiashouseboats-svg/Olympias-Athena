@@ -159,8 +159,9 @@
     }
 
     // Show other categories (exclude main and legal)
-   Object.keys(categories)
+  Object.keys(categories)
   .filter(cat => cat !== 'main' && cat !== 'legal' && categories[cat].length > 0)
+  .slice(0, 6) // Max 3 additional sections
   .forEach(cat => {
         const links = categories[cat].slice(0, CONFIG.MAX_CATEGORY_LINKS);
         footerSections += `
