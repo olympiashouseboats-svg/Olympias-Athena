@@ -224,6 +224,55 @@
     "lastModified": "2026-05-21"
   },
   {
+    "url": "kashmir.html",
+    "title": "Kashmir Tourism",
+    "category": "kashmir",
+    "priority": 1,
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "gulmarg.html",
+    "title": "Gulmarg",
+    "category": "kashmir",
+    "priority": 0.9,
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "pahalgam.html",
+    "title": "Pahalgam",
+    "category": "kashmir",
+    "priority": 0.9,
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "sonamarg.html",
+    "title": "Sonamarg",
+    "category": "kashmir",
+    "priority": 0.9,
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "yusmarg.html",
+    "title": "Yusmarg",
+    "category": "kashmir",
+    "priority": 0.9,
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "doodhpathri.html",
+    "title": "Doodhpathri",
+    "category": "kashmir",
+    "priority": 0.9,
+    "lastModified": "2026-05-21"
+  },
+  {
+    "url": "vaishno-devi.html",
+    "title": "Vaishno Devi",
+    "category": "kashmir",
+    "priority": 0.9,
+    "lastModified": "2026-05-21"
+  },
+  {
     "url": "terms.html",
     "title": "Terms & Conditions",
     "category": "legal",
