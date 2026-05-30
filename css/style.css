@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ===== GOOGLE FONTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
 
 /* ===== DESIGN TOKENS ===== */
 :root {
@@ -20,6 +20,8 @@
   --gold-dim:      rgba(200,150,62,0.15);
   --white:         #ffffff;
   --text-dark:     #1a0e05;
+  --text:          #4a3020;
+  --dark:          #1a0e05;
   --text-mid:      #4a3020;
   --text-muted:    #8a6a4a;
   --border:        rgba(200,150,62,0.22);
@@ -192,17 +194,40 @@ button { font-family: var(--font-body); cursor: pointer; }
   display: flex; align-items: center; justify-content: center;
   text-align: center;
   background-size: cover; background-position: center;
-  overflow: hidden;
+  /* NOTE: overflow must NOT be hidden — allows overlapping corner image to show */
+  overflow: visible;
 }
+/* =========================================================
+   PAGE HERO CORNER OVERLAP IMAGE (blog & room pages)
+   ========================================================= */
+.hero-overlap-img {
+  position: absolute;
+  bottom: -80px;
+  right: 40px;
+  width: 280px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  border: 6px solid #ffffff;
+  z-index: 10;
+  /* Ensures image stays above the dark overlay */
+}
+.hero-overlap-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Clip the hero overlay so it doesn't bleed over the overlap image */
 .page-hero::after {
   content: '';
   position: absolute; inset: 0;
   background: linear-gradient(to bottom, rgba(20,10,3,0.65) 0%, rgba(20,10,3,0.82) 100%);
+  /* z-index 1 — sits between background and content */
+  z-index: 1;
 }
-.page-hero-content {
-  position: relative; z-index: 2;
-  padding: 0 1rem;
-}
+.page-hero-content { z-index: 2; }
 .breadcrumb {
   display: flex; align-items: center; gap: 8px;
   justify-content: center;
@@ -847,9 +872,13 @@ footer {
 .footer-grid {
   max-width: 1200px; margin: 0 auto;
   display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: clamp(2rem,4vw,3rem);
+  gap: clamp(1.5rem,3vw,3rem);
   padding-bottom: 3rem;
   border-bottom: 1px solid rgba(200,150,62,0.1);
+}
+/* Allow footer to handle 5+ columns gracefully */
+@media (min-width: 1200px) {
+  .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
 }
 .footer-desc {
   font-size: 0.83rem; font-weight: 300;
@@ -941,8 +970,52 @@ footer {
 
 
 /* =========================================================
-   SCHEMA / STRUCTURED DATA HELPER CLASSES
+   ROOM DETAIL PAGE STYLES (deluxeroom, coupleroom etc.)
    ========================================================= */
+
+/* 2-col room detail + inclusion grids */
+.room-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+/* 3-col amenity icon grid */
+.room-amenity-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.room-amenity-card {
+  background: var(--cream-soft);
+  padding: 1.2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.room-amenity-card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.room-amenity-card p { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); line-height: 1.4; }
+
+/* Room other-rooms link cards */
+.room-links-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.room-link-card {
+  display: block;
+  background: var(--cream-soft);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text-dark);
+  border-left: 4px solid var(--gold);
+  transition: background 0.3s, transform 0.2s;
+}
+.room-link-card:hover { background: var(--cream-dark); transform: translateX(4px); }
+.room-link-card strong { font-size: 1rem; display: block; margin-bottom: 0.3rem; }
+.room-link-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
 .sr-only {
   position: absolute; width: 1px; height: 1px;
   padding: 0; margin: -1px; overflow: hidden;
@@ -995,6 +1068,19 @@ footer {
   .nav-logo-name { font-size: 1rem; }
   .nav-logo-sub { letter-spacing: 2px; }
   .nav-logo-icon { width: 38px; height: 38px; font-size: 1.1rem; }
+
+  /* --- Overlap image: hide on mobile (hero too small) --- */
+  .hero-overlap-img,
+  header .page-hero > div[style*="position:absolute"],
+  header[style*="position:relative"] > div[style*="bottom:-80px"] {
+    display: none !important;
+  }
+
+  /* --- Extra padding to compensate for removed overlap --- */
+  article > .container,
+  section > .container {
+    padding-top: 3rem !important;
+  }
 
   /* --- Footer --- */
   .footer-grid { grid-template-columns: 1fr; gap: 1.8rem; }
@@ -1055,6 +1141,21 @@ footer {
   .contact-grid { gap: 2rem; }
   .contact-icon { width: 42px; height: 42px; font-size: 1rem; }
 
+  /* --- Room detail page grids: stack on mobile --- */
+  .room-detail-grid { grid-template-columns: 1fr; }
+  .room-amenity-grid { grid-template-columns: repeat(2, 1fr); }
+  .room-links-grid { grid-template-columns: 1fr; }
+
+  /* Inline style grids on room pages */
+  div[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+  div[style*="grid-template-columns:repeat(3,1fr)"],
+  div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+
   /* --- Values grid: full width --- */
   .value-card { padding: 1rem; }
 
@@ -1083,6 +1184,11 @@ footer {
 
   /* --- Buttons: full width on mobile where stacked --- */
   .contact-action-btns .contact-action-btn { width: 100%; justify-content: center; }
+
+  /* --- Blog/attraction page inline containers --- */
+  .container[style*="padding:6rem"] {
+    padding-top: 3rem !important;
+  }
 }
 
 /* ── 480px: small phones ── */
@@ -1090,7 +1196,7 @@ footer {
   /* --- Nav --- */
   #navbar { padding: 0 1rem; }
   .nav-logo { gap: 8px; }
-  .nav-logo-sub { display: none; } /* hide tagline on tiny screens */
+  .nav-logo-sub { display: none; }
 
   /* --- Sections: tighter padding --- */
   section { padding: clamp(2.5rem, 6vw, 4rem) 1rem; }
@@ -1099,10 +1205,26 @@ footer {
   .btn { padding: 14px 24px; font-size: 0.74rem; width: 100%; justify-content: center; }
   .btn + .btn { margin-top: 0.6rem; }
 
+  /* --- Inline booking CTA buttons on blog/room pages --- */
+  a[style*="display:inline-block"][style*="background:var(--dark)"],
+  a[href*="wa.me"][style*="display:inline-block"] {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+
   /* --- Hero --- */
   .page-hero { min-height: 32vh; }
   .page-hero p { letter-spacing: 2px; font-size: 0.72rem; }
   .breadcrumb { font-size: 0.66rem; }
+
+  /* --- Room amenity grid: 2 col then 1 col on tiny --- */
+  .room-amenity-grid { grid-template-columns: repeat(2, 1fr); }
+  div[style*="grid-template-columns:repeat(3,1fr)"],
+  div[style*="grid-template-columns: repeat(3, 1fr)"] {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
 
   /* --- Stats: compact numbers --- */
   .stat-num { font-size: 2rem; }
@@ -1115,7 +1237,7 @@ footer {
   /* --- Form --- */
   .form-group input,
   .form-group textarea,
-  .form-group select { font-size: 1rem; } /* prevent iOS zoom-in on focus */
+  .form-group select { font-size: 1rem; }
 
   /* --- Footer --- */
   .footer-copy, .footer-legal a { font-size: 0.68rem; }
@@ -1146,6 +1268,12 @@ footer {
   /* --- Owner card: compact --- */
   .owner-avatar { width: 60px; height: 60px; font-size: 1.5rem; }
   .owner-name { font-size: 1.2rem; }
+
+  /* --- Blog/room page article container padding fix --- */
+  .container[style*="padding"] {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
 /* ── 360px: very small devices (Galaxy A, older phones) ── */
@@ -1166,86 +1294,4 @@ footer {
   .gal-overlay { background: rgba(59,31,10,0.18); }
   /* WA label always visible */
   .wa-label { opacity: 1; transform: translateX(0); }
-}
-/* =========================================================
-   ABOUT SECTION MOBILE FIX
-   ========================================================= */
-
-.about-images{
-  position: relative;
-  max-width: 100%;
-}
-
-.main-about-img{
-  width: 100%;
-  aspect-ratio: 4/3;
-  object-fit: cover;
-  display: block;
-  border-radius: var(--radius);
-}
-
-.small-about-img{
-  position: absolute;
-  bottom: -1.8rem;
-  right: -1rem;
-  width: 42%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  border-radius: var(--radius);
-  border: 4px solid var(--walnut);
-  box-shadow: var(--shadow-md);
-  z-index: 2;
-}
-
-/* Tablet */
-@media(max-width:900px){
-
-  #about-grid{
-    gap: 3rem !important;
-    align-items: center;
-  }
-
-  .small-about-img{
-    width: 38%;
-    right: 0;
-  }
-
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-  #about-grid{
-    grid-template-columns: 1fr !important;
-    gap: 3rem !important;
-  }
-
-  .about-images{
-    order: -1;
-    margin-bottom: 1rem;
-  }
-
-  .small-about-img{
-    position: relative;
-    width: 72%;
-    right: auto;
-    bottom: auto;
-    margin: -40px auto 0;
-    display: block;
-  }
-
-}
-
-/* Small phones */
-@media(max-width:480px){
-
-  .small-about-img{
-    width: 82%;
-    margin-top: -28px;
-  }
-
-  .main-about-img{
-    aspect-ratio: 1.1 / 1;
-  }
-
 }
