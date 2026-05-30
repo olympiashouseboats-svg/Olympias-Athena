@@ -272,6 +272,41 @@
     "priority": 0.9,
     "lastModified": "2026-05-21"
   },
+   {
+    "url": "Deluxeroom.html",
+    "title": "Deluxeroom",
+    "category": "rooms",
+    "priority": 0.9,
+    "lastModified": "2026-05-30"
+  },
+   {
+    "url": "superdeluxeroom.html",
+    "title": "superdeluxeroom",
+    "category": "rooms",
+    "priority": 0.9,
+    "lastModified": "2026-05-30"
+  },
+   {
+    "url": "Luxurysuite.html",
+    "title": "Luxurysuite",
+    "category": "rooms",
+    "priority": 0.9,
+    "lastModified": "2026-05-30"
+  },
+   {
+    "url": "Familyroom.html",
+    "title": "Familyroom",
+    "category": "rooms",
+    "priority": 0.9,
+    "lastModified": "2026-05-30"
+  },
+   {
+    "url": "Coupleroom.html",
+    "title": "Coupleroom",
+    "category": "rooms",
+    "priority": 0.9,
+    "lastModified": "2026-05-30"
+  },
   {
     "url": "terms.html",
     "title": "Terms & Conditions",
