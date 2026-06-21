@@ -14,10 +14,35 @@
   <meta property="og:description" content="Everything you need to know about Olympias Athena Houseboats - luxury accommodations, amenities, booking info & guest experiences on Dal Lake Srinagar." />
   <meta property="og:url" content="https://olympiasathena.com/olympias-athena-houseboats-guide.html" />
   <meta property="og:type" content="article" />
-  <meta property="og:image" content="https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765511/DSC_0001_1_fdlbjv.jpg" />
+  <meta property="og:image" content="https://res.cloudinary.com/dq8d09pnr/image/upload/f_auto,q_auto,w_1280/v1778765511/DSC_0001_1_fdlbjv.jpg" />
   <meta property="article:published_time" content="2026-05-18T00:00:00+05:30" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    /* Mobile-first critical CSS — keeps first paint fast & layout stable */
+    *{box-sizing:border-box;}
+    img{max-width:100%;height:auto;display:block;}
+    .page-hero{background-size:cover;background-position:center;min-height:46vh;}
+    .page-hero-content h1{font-size:1.7rem;line-height:1.25;}
+    .page-hero-content p{font-size:0.95rem;}
+    .container{padding:2.25rem 1.1rem;max-width:900px;margin:0 auto;}
+    .section-heading,article h2{font-size:1.4rem;line-height:1.3;}
+    article h3{font-size:1.15rem;}
+    .section-body{font-size:1rem;line-height:1.75;}
+    @media(min-width:640px){
+      .page-hero-content h1{font-size:2.2rem;}
+      .container{padding:3rem 1.5rem;}
+      .section-heading,article h2{font-size:1.7rem;}
+      article h3{font-size:1.35rem;}
+    }
+    @media(min-width:1024px){
+      .page-hero{min-height:50vh;}
+      .page-hero-content h1{font-size:2.8rem;}
+      .container{padding:4rem 2rem;}
+      .section-heading,article h2{font-size:2rem;}
+      article h3{font-size:1.6rem;}
+    }
+  </style>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Google tag (gtag.js) -->
@@ -35,7 +60,7 @@
     "@type": "BlogPosting",
     "headline": "Olympias Athena Houseboats Dal Lake - Complete Guide to Luxury Houseboat Stay",
     "description": "Comprehensive guide to booking and experiencing Olympias Athena Houseboats on Dal Lake Srinagar.",
-    "image": "https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765511/DSC_0001_1_fdlbjv.jpg",
+    "image": "https://res.cloudinary.com/dq8d09pnr/image/upload/f_auto,q_auto,w_1280/v1778765511/DSC_0001_1_fdlbjv.jpg",
     "datePublished": "2026-05-18",
     "author": {
       "@type": "Organization",
@@ -66,7 +91,7 @@
   </div>
 
   <!-- HERO -->
-  <header class="page-hero" style="background-image:url('https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765511/DSC_0001_1_fdlbjv.jpg'); padding-top:var(--nav-height);">
+  <header class="page-hero" style="background-image:url('https://res.cloudinary.com/dq8d09pnr/image/upload/f_auto,q_auto,w_1280/v1778765511/DSC_0001_1_fdlbjv.jpg'); padding-top:var(--nav-height);">
     <div class="page-hero-content">
       <nav class="breadcrumb"><a href="index.html">Home</a><span class="sep">›</span><span>Olympias Athena Guide</span></nav>
       <h1><em>Olympias Athena</em> Houseboats</h1>
@@ -93,7 +118,7 @@
 
       <!-- FEATURED IMAGE 2 -->
       <div class="reveal" style="margin:3rem 0;">
-        <img src="https://res.cloudinary.com/dq8d09pnr/image/upload/v1778765810/DSC_0045_oxenpq.jpg" alt="Olympias Athena Houseboat Luxury Room Dal Lake Srinagar" style="width:100%;height:auto;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);" loading="lazy" />
+        <img src="https://res.cloudinary.com/dq8d09pnr/image/upload/f_auto,q_auto,w_700/v1778765810/DSC_0045_oxenpq.jpg" alt="Olympias Athena Houseboat Luxury Room Dal Lake Srinagar" style="width:100%;height:auto;border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,0.15);" fetchpriority="high" loading="eager" />
         <p style="text-align:center;font-size:0.9rem;color:var(--text-muted);margin-top:0.8rem;font-style:italic;">Premium Room Interior - Olympias Athena Houseboats, Dal Lake</p>
       </div>
 
@@ -323,7 +348,7 @@
     </div>
   </article>
 
-  <script src="js/main.js"></script>
-  <script src="partial.js"></script>
+  <script src="js/main.js" defer></script>
+  <script src="partial.js" defer></script>
 </body>
 </html>
