@@ -3,8 +3,14 @@
    Dal Lake, Srinagar, Kashmir — Luxury Houseboat Website
    ============================================================ */
 
-/* ===== GOOGLE FONTS ===== */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+/* ===== GOOGLE FONTS =====
+   NOTE: fonts are loaded via <link rel="preconnect"> + <link rel="stylesheet">
+   in the <head> of every page (faster, non-render-blocking). The @import
+   below was removed because @import inside CSS is render-blocking and was
+   loading the same fonts a second time, which slowed down first paint on
+   mobile. If a page is ever missing the <link> tags, add this back:
+   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+*/
 
 /* ===== DESIGN TOKENS ===== */
 :root {
@@ -23,7 +29,7 @@
   --text:          #4a3020;
   --dark:          #1a0e05;
   --text-mid:      #4a3020;
-  --text-muted:    #8a6a4a;
+  --text-muted:    #6e4f33; /* darkened from #8a6a4a for AA contrast on cream backgrounds */
   --border:        rgba(200,150,62,0.22);
   --border-dark:   rgba(200,150,62,0.4);
   --glass-bg:      rgba(248,241,228,0.10);
@@ -56,6 +62,42 @@ img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 button { font-family: var(--font-body); cursor: pointer; }
+
+/* =========================================================
+   MOBILE-FIRST BASE TYPOGRAPHY
+   Sets readable defaults at small sizes first, then scales
+   up fluidly with clamp() so text never starts too small on
+   phones and never gets oversized on desktop.
+   ========================================================= */
+body {
+  font-size: clamp(15.5px, 1.05vw + 13px, 17px);
+  line-height: 1.7;
+  font-weight: 400; /* default to regular weight, not thin, for legibility */
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  color: var(--text-dark);
+  line-height: 1.2;
+  font-weight: 500;
+}
+h1 { font-size: clamp(1.9rem, 4vw + 1rem, 3rem); }
+h2 { font-size: clamp(1.55rem, 2.6vw + 1rem, 2.3rem); }
+h3 { font-size: clamp(1.25rem, 1.6vw + 1rem, 1.6rem); }
+p  { color: var(--text-mid); }
+strong, b { font-weight: 600; }
+
+/* Comfortable, accessible tap targets and focus visibility on mobile */
+a, button, .btn, .nav-cta {
+  -webkit-tap-highlight-color: rgba(200,150,62,0.25);
+}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* Prevent iOS auto-zoom on form focus by keeping inputs >=16px on mobile */
+input, textarea, select { font-size: max(16px, 1rem); }
+
 
 /* ===== SCROLLBAR ===== */
 ::-webkit-scrollbar { width: 6px; }
@@ -279,8 +321,8 @@ h2.section-heading em { font-style: italic; color: var(--gold); }
 h2.section-heading.light { color: var(--cream); }
 
 .section-body {
-  font-size: 0.98rem; font-weight: 300;
-  color: var(--text-mid); line-height: 1.85;
+  font-size: clamp(1rem, 0.4vw + 0.92rem, 1.08rem); font-weight: 400;
+  color: var(--text-mid); line-height: 1.8;
 }
 .section-body.light { color: rgba(248,241,228,0.72); }
 
@@ -469,8 +511,8 @@ h2.section-heading.light { color: var(--cream); }
   color: var(--walnut); margin-bottom: 0.5rem;
 }
 .service-card p {
-  font-size: 0.86rem; font-weight: 300;
-  color: var(--text-mid); line-height: 1.72;
+  font-size: clamp(0.95rem, 0.3vw + 0.88rem, 1rem); font-weight: 400;
+  color: var(--text-mid); line-height: 1.75;
 }
 
 
@@ -681,8 +723,8 @@ h2.section-heading.light { color: var(--cream); }
 .faq-item.open .faq-icon { transform: rotate(45deg); }
 .faq-a {
   max-height: 0; overflow: hidden;
-  font-size: 0.86rem; font-weight: 300;
-  color: var(--text-mid); line-height: 1.72;
+  font-size: clamp(0.95rem, 0.3vw + 0.88rem, 1rem); font-weight: 400;
+  color: var(--text-mid); line-height: 1.75;
   padding: 0 1.5rem;
   transition: max-height 0.4s var(--ease), padding 0.3s;
 }
@@ -815,8 +857,8 @@ h2.section-heading.light { color: var(--cream); }
 }
 .blog-card h3 a:hover { color: var(--walnut-light); }
 .blog-card p {
-  font-size: 0.84rem; font-weight: 300;
-  color: var(--text-mid); line-height: 1.68;
+  font-size: clamp(0.93rem, 0.3vw + 0.86rem, 0.98rem); font-weight: 400;
+  color: var(--text-mid); line-height: 1.7;
   margin-bottom: 1.2rem;
 }
 .blog-read {
@@ -846,12 +888,12 @@ h2.section-heading.light { color: var(--cream); }
   font-family: var(--font-display);
   color: var(--walnut); margin: 2rem 0 0.8rem;
 }
-.article-body h2 { font-size: 1.8rem; }
-.article-body h3 { font-size: 1.4rem; }
-.article-body h4 { font-size: 1.1rem; }
-.article-body p { font-size: 0.97rem; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.2rem; }
+.article-body h2 { font-size: clamp(1.4rem, 1.6vw + 1rem, 1.8rem); }
+.article-body h3 { font-size: clamp(1.15rem, 1vw + 0.9rem, 1.4rem); }
+.article-body h4 { font-size: clamp(1.02rem, 0.6vw + 0.85rem, 1.1rem); }
+.article-body p { font-size: clamp(1rem, 0.3vw + 0.94rem, 1.05rem); font-weight: 400; color: var(--text-mid); line-height: 1.85; margin-bottom: 1.2rem; }
 .article-body ul { padding-left: 1.5rem; margin-bottom: 1.2rem; }
-.article-body ul li { font-size: 0.95rem; color: var(--text-mid); line-height: 1.8; list-style: disc; }
+.article-body ul li { font-size: clamp(0.98rem, 0.3vw + 0.92rem, 1.02rem); font-weight: 400; color: var(--text-mid); line-height: 1.8; list-style: disc; }
 .article-body img { width:100%; border-radius:var(--radius); margin:1.5rem 0; }
 .article-body blockquote {
   border-left: 3px solid var(--gold);
@@ -881,9 +923,9 @@ footer {
   .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
 }
 .footer-desc {
-  font-size: 0.83rem; font-weight: 300;
-  color: rgba(248,241,228,0.42);
-  line-height: 1.72; margin: 1rem 0;
+  font-size: 0.88rem; font-weight: 400;
+  color: rgba(248,241,228,0.68);
+  line-height: 1.75; margin: 1rem 0;
 }
 .footer-social { display: flex; gap: 10px; margin-top: 1.2rem; }
 .social-btn {
@@ -901,15 +943,15 @@ footer {
 }
 .footer-links { display: flex; flex-direction: column; gap: 0.65rem; }
 .footer-links a {
-  font-size: 0.8rem; font-weight: 300;
-  color: rgba(248,241,228,0.4); transition: color 0.3s;
+  font-size: 0.86rem; font-weight: 400;
+  color: rgba(248,241,228,0.68); transition: color 0.3s;
 }
 .footer-links a:hover { color: var(--gold-light); }
 .footer-contact-row { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 0.8rem; }
 .footer-contact-row .ico { color: var(--gold); font-size: 0.88rem; margin-top: 1px; flex-shrink: 0; }
 .footer-contact-row span, .footer-contact-row a {
-  font-size: 0.78rem; font-weight: 300;
-  color: rgba(248,241,228,0.4); line-height: 1.5; transition: color 0.3s;
+  font-size: 0.85rem; font-weight: 400;
+  color: rgba(248,241,228,0.68); line-height: 1.55; transition: color 0.3s;
 }
 .footer-contact-row a:hover { color: var(--gold-light); }
 .footer-bottom {
@@ -966,7 +1008,7 @@ footer {
   font-family: var(--font-display); font-size: 1rem;
   color: var(--walnut); margin-bottom: 0.4rem;
 }
-.value-card p { font-size: 0.82rem; font-weight: 300; color: var(--text-mid); line-height: 1.6; }
+.value-card p { font-size: clamp(0.92rem, 0.3vw + 0.85rem, 0.96rem); font-weight: 400; color: var(--text-mid); line-height: 1.65; }
 
 
 /* =========================================================
@@ -1244,7 +1286,7 @@ footer {
 
   /* --- Testimonial --- */
   .testi-card { padding: 1.4rem; }
-  .testi-text { font-size: 0.95rem; }
+  .testi-text { font-size: 1rem; }
 
   /* --- Article meta wraps cleanly --- */
   .article-meta { gap: 0.6rem; }
