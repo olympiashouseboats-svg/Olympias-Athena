@@ -1409,7 +1409,106 @@ div[style*="grid-template-columns: repeat(3, 1fr)"] {
   }
 }
 
+/* Floating WhatsApp */
+#wa-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 9999;
+    animation: fadeInUp 0.6s ease;
+}
 
+/* Label */
+.wa-label {
+    background: #ffffff;
+    color: #333;
+    padding: 10px 14px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    white-space: nowrap;
+}
+
+/* WhatsApp Button */
+.wa-btn {
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+}
+
+/* Hover */
+.wa-btn:hover {
+    background: #1ebe5d;
+    transform: scale(1.1);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.6);
+}
+
+/* SVG Icon */
+.wa-btn svg {
+    width: 30px;
+    height: 30px;
+    fill: #fff;
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Fade Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    #wa-float {
+        right: 15px;
+        bottom: 20px;
+    }
+
+    .wa-label {
+        display: none; /* Hide label on mobile */
+    }
+
+    .wa-btn {
+        width: 56px;
+        height: 56px;
+    }
+
+    .wa-btn svg {
+        width: 28px;
+        height: 28px;
+    }
+}
 /* =========================================================
    FINE-TUNING FOR VERY SMALL PHONES (≤360px)
    ========================================================= */
