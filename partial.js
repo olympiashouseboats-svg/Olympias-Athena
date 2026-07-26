@@ -23,7 +23,14 @@
     phone: '+919596431735',
     email: 'guroosaif6@gmail.com',
     address: 'Dal Lake, Boulevard Road, Ghat No.13, Srinagar, J&K 190001',
-    coordinates: { lat: '34.0837', lng: '74.8262' }
+    coordinates: { lat: '34.0837', lng: '74.8262' },
+    social: [
+      { name: 'LinkedIn', url: 'https://in.linkedin.com/in/olympias-athena-b3912b419' },
+      { name: 'Facebook', url: 'https://www.facebook.com/share/1Dks2ZTbma/' },
+      { name: 'Instagram', url: 'https://www.instagram.com/olympias_athena' },
+      { name: 'YouTube', url: 'https://youtube.com/@olympiasathena' },
+      { name: 'Google Reviews', url: 'https://g.page/r/CRbbS6Zn62yHEBM/review' }
+    ]
   };
 
   // ===== CACHE MANAGEMENT =====
@@ -89,21 +96,32 @@
 
   // ===== CATEGORIZE PAGES =====
   function categorizePages(pages) {
-    const categories = {};
+    const categories = {
+      main: [],
+      destinations: [],
+      services: [],
+      business: [],
+      latest: [],
+      legal: []
+    };
 
-    // Group pages by their category
     pages.forEach(page => {
-      const cat = page.category || 'other';
-      if (!categories[cat]) {
-        categories[cat] = [];
+      const cat = page.category || 'main';
+      if (categories[cat]) {
+        categories[cat].push(page);
       }
-      categories[cat].push(page);
     });
 
-    // Sort each category by priority
+    // Sort by priority
     Object.keys(categories).forEach(key => {
       categories[key].sort((a, b) => (b.priority || 0.5) - (a.priority || 0.5));
     });
+
+    // Get latest pages (sort by lastModified if available)
+    categories.latest = [...pages]
+      .filter(p => p.lastModified)
+      .sort((a, b) => new Date(b.lastModified) - new Date(a.lastModified))
+      .slice(0, 5);
 
     return categories;
   }
@@ -112,79 +130,15 @@
   function buildFooterHTML(categories) {
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
     
-    // Category display names
-    const categoryNames = {
-      'main': 'Quick Links',
-      'destinations': 'Top Destinations',
-      'services': 'Our Services',
-      'business': 'Business Pages',
-      'legal': 'Legal & Policies',
-      'tours': 'Tour Packages',
-      'activities': 'Activities',
-      'hotels': 'Hotels',
-      'transport': 'Transport Services',
-      'blog': 'Blog',
-      'houseboats': 'Houseboats'
-       
-    };
-
-    function getCategoryTitle(cat) {
-      // If custom name exists, use it
-      if (categoryNames[cat]) return categoryNames[cat];
-      // Otherwise capitalize category name
-      return cat.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-    }
+    const mainLinks = categories.main.slice(0, CONFIG.MAX_CATEGORY_LINKS);
+    const destinationLinks = categories.destinations.slice(0, CONFIG.MAX_CATEGORY_LINKS);
+    const serviceLinks = categories.services.slice(0, CONFIG.MAX_CATEGORY_LINKS);
+    const latestLinks = categories.latest.slice(0, 5);
+    const legalLinks = categories.legal;
 
     function createLink(page) {
       const isActive = currentPath === page.url ? ' class="active"' : '';
       return `<a href="${page.url}"${isActive}>${page.title}</a>`;
-    }
-
-    // Build footer sections dynamically
-    let footerSections = '';
-    
-    // Always show main/quick links first
-    if (categories.main && categories.main.length > 0) {
-      const links = categories.main.slice(0, CONFIG.MAX_CATEGORY_LINKS);
-      footerSections += `
-        <div class="footer-col">
-          <h3 class="footer-heading">Quick Links</h3>
-          <nav class="footer-links">
-            ${links.map(createLink).join('')}
-          </nav>
-        </div>
-      `;
-    }
-
-    // Show other categories (exclude main and legal)
-  Object.keys(categories)
-  .filter(cat => cat !== 'main' && cat !== 'legal' && categories[cat].length > 0)
-  .slice(0, 20) // Max 3 additional sections
-  .forEach(cat => {
-        const links = categories[cat].slice(0, CONFIG.MAX_CATEGORY_LINKS);
-        footerSections += `
-          <div class="footer-col">
-            <h3 class="footer-heading">${getCategoryTitle(cat)}</h3>
-            <nav class="footer-links">
-              ${links.map(createLink).join('')}
-            </nav>
-          </div>
-        `;
-      });
-
-    // Always show legal section last
-    if (categories.legal && categories.legal.length > 0) {
-      footerSections += `
-        <div class="footer-col">
-          <h3 class="footer-heading">Legal & More</h3>
-          <nav class="footer-links">
-            ${categories.legal.map(createLink).join('')}
-            <a href="all-pages.html"><strong>📄 View All Pages</strong></a>
-          </nav>
-        </div>
-      `;
     }
 
     const footerHTML = `
@@ -212,7 +166,60 @@
           </div>
         </div>
 
-        ${footerSections}
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <nav class="footer-links">
+            ${mainLinks.map(createLink).join('')}
+          </nav>
+        </div>
+
+        <!-- Follow Us -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Follow Us</h3>
+          <nav class="footer-links">
+            ${SITE_INFO.social.map(s => `<a href="${s.url}" target="_blank" rel="noopener">${s.name}</a>`).join('')}
+          </nav>
+        </div>
+
+        <!-- Destinations (if available) -->
+        ${destinationLinks.length > 0 ? `
+        <div class="footer-col">
+          <h3 class="footer-heading">Destinations</h3>
+          <nav class="footer-links">
+            ${destinationLinks.map(createLink).join('')}
+          </nav>
+        </div>
+        ` : ''}
+
+        <!-- Services (if available) -->
+        ${serviceLinks.length > 0 ? `
+        <div class="footer-col">
+          <h3 class="footer-heading">Our Services</h3>
+          <nav class="footer-links">
+            ${serviceLinks.map(createLink).join('')}
+          </nav>
+        </div>
+        ` : ''}
+
+        <!-- Latest Pages (if available) -->
+        ${latestLinks.length > 0 ? `
+        <div class="footer-col">
+          <h3 class="footer-heading">Recently Added</h3>
+          <nav class="footer-links">
+            ${latestLinks.map(createLink).join('')}
+          </nav>
+        </div>
+        ` : ''}
+
+        <!-- Legal & All Pages -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Legal & More</h3>
+          <nav class="footer-links">
+            ${legalLinks.map(createLink).join('')}
+            <a href="all-pages.html"><strong>📄 View All Pages</strong></a>
+          </nav>
+        </div>
 
       </div>
 
@@ -229,7 +236,7 @@
 
   // ===== BUILD SCHEMA MARKUP =====
   function buildSchemaMarkup(pages) {
-    if (!CONFIG.ENABLE_SCHEMA) return '';
+    if (!CONFIG.ENABLE_SCHEMA) return [];
 
     const schemaLinks = pages
       .filter(p => p.category === 'main' || p.priority >= 0.7)
@@ -241,7 +248,7 @@
         'url': `https://${SITE_INFO.domain}/${page.url}`
       }));
 
-    const schema = {
+    const navSchema = {
       '@context': 'https://schema.org',
       '@type': 'ItemList',
       'name': 'Site Navigation',
@@ -249,11 +256,22 @@
       'itemListElement': schemaLinks
     };
 
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(schema);
-    
-    return script;
+    const orgSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      'name': SITE_INFO.name,
+      'url': `https://${SITE_INFO.domain}`,
+      'sameAs': SITE_INFO.social.map(s => s.url)
+    };
+
+    const scripts = [navSchema, orgSchema].map(obj => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.textContent = JSON.stringify(obj);
+      return script;
+    });
+
+    return scripts;
   }
 
   // ===== INJECT FOOTER =====
@@ -273,8 +291,8 @@
 
       // Add schema markup
       if (CONFIG.ENABLE_SCHEMA) {
-        const schema = buildSchemaMarkup(pages);
-        document.head.appendChild(schema);
+        const schemas = buildSchemaMarkup(pages);
+        schemas.forEach(s => document.head.appendChild(s));
       }
 
       // Add footer styles dynamically if not loaded
