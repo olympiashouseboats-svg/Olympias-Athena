@@ -13,7 +13,7 @@
     CACHE_KEY: 'olympias_pages_cache',
     CACHE_DURATION: 24 * 60 * 60 * 1000, // 24 hours
     REGISTRY_URL: './pages-registry.json', // Will be replaced with Firestore later
-    MAX_CATEGORY_LINKS: 8,
+    MAX_CATEGORY_LINKS: 50,
     ENABLE_SCHEMA: true
   };
 
