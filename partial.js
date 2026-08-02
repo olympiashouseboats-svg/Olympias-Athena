@@ -13,7 +13,7 @@
     CACHE_KEY: 'olympias_pages_cache',
     CACHE_DURATION: 24 * 60 * 60 * 1000, // 24 hours
     REGISTRY_URL: './pages-registry.json', // Will be replaced with Firestore later
-    MAX_CATEGORY_LINKS: 50,
+    MAX_CATEGORY_LINKS: 8,
     ENABLE_SCHEMA: true
   };
 
@@ -81,14 +81,25 @@
   }
 
   // ===== FALLBACK PAGES (if registry fails) =====
+  // Mirrors pages-registry.json so a fetch failure still shows the complete footer,
+  // not just the original 8 pages. Keep this in sync when adding new pages.
   function getFallbackPages() {
     return [
       { url: 'index.html', title: 'Home', category: 'main', priority: 1.0 },
       { url: 'about.html', title: 'About Us', category: 'main', priority: 0.9 },
-      { url: 'services.html', title: 'Services', category: 'main', priority: 0.9 },
       { url: 'rooms.html', title: 'Rooms', category: 'main', priority: 0.9 },
       { url: 'gallery.html', title: 'Gallery', category: 'main', priority: 0.8 },
       { url: 'contact.html', title: 'Contact', category: 'main', priority: 0.8 },
+      { url: 'services.html', title: 'Services', category: 'services', priority: 0.9 },
+      { url: 'athena-houseboat.html', title: 'Athena Houseboat', category: 'services', priority: 0.9 },
+      { url: 'olympias-houseboat.html', title: 'Olympias Houseboat', category: 'services', priority: 0.9 },
+      { url: 'houseboats-in-kashmir.html', title: 'Houseboats in Kashmir', category: 'destinations', priority: 0.75 },
+      { url: 'best-houseboats-srinagar-dal-lake.html', title: 'Best Houseboats: Srinagar Dal Lake', category: 'destinations', priority: 0.75 },
+      { url: 'best-houseboats-near-dal-lake.html', title: 'Best Houseboats Near Dal Lake', category: 'destinations', priority: 0.7 },
+      { url: 'about-dal-lake.html', title: 'About Dal Lake', category: 'destinations', priority: 0.75 },
+      { url: 'how-dal-lake-houseboats-are-made.html', title: 'How Houseboats Are Made', category: 'destinations', priority: 0.7 },
+      { url: 'sonamarg.html', title: 'Sonamarg Travel Guide', category: 'destinations', priority: 0.7 },
+      { url: 'blog-ultimate-guide-olympias-athena.html', title: 'Complete Guide to Olympias Athena', category: 'destinations', priority: 0.7 },
       { url: 'terms.html', title: 'Terms & Conditions', category: 'legal', priority: 0.3 },
       { url: 'privacy.html', title: 'Privacy Policy', category: 'legal', priority: 0.3 }
     ];
@@ -198,6 +209,16 @@
           <h3 class="footer-heading">Our Services</h3>
           <nav class="footer-links">
             ${serviceLinks.map(createLink).join('')}
+          </nav>
+        </div>
+        ` : ''}
+
+        <!-- Business Pages (if available) -->
+        ${categories.business && categories.business.length > 0 ? `
+        <div class="footer-col">
+          <h3 class="footer-heading">Business</h3>
+          <nav class="footer-links">
+            ${categories.business.slice(0, CONFIG.MAX_CATEGORY_LINKS).map(createLink).join('')}
           </nav>
         </div>
         ` : ''}
