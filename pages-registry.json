@@ -1,0 +1,138 @@
+[
+  {
+    "url": "index.html",
+    "title": "Home",
+    "category": "main",
+    "priority": 1.0,
+    "lastModified": "2026-05-18",
+    "description": "Luxury houseboat stay on Dal Lake, Srinagar, Kashmir"
+  },
+  {
+    "url": "about.html",
+    "title": "About Us",
+    "category": "main",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Learn about Olympias Athena Group of Houseboats and our story"
+  },
+  {
+    "url": "rooms.html",
+    "title": "Rooms",
+    "category": "main",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Explore our luxury houseboat rooms with Dal Lake views"
+  },
+  {
+    "url": "gallery.html",
+    "title": "Gallery",
+    "category": "main",
+    "priority": 0.8,
+    "lastModified": "2026-05-18",
+    "description": "Photo gallery of our houseboats, rooms, and Dal Lake scenery"
+  },
+  {
+    "url": "contact.html",
+    "title": "Contact",
+    "category": "main",
+    "priority": 0.8,
+    "lastModified": "2026-05-18",
+    "description": "Get in touch for bookings and enquiries"
+  },
+  {
+    "url": "services.html",
+    "title": "Services",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "athena-houseboat.html",
+    "title": "Athena Houseboat",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-07-29",
+    "description": "Premium hand-carved houseboat at Boulevard Road, Ghat No. 13, Dal Lake"
+  },
+  {
+    "url": "olympias-houseboat.html",
+    "title": "Olympias Houseboat",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-07-29",
+    "description": "Premium hand-carved houseboat at Boulevard Road, Ghat No. 13, Dal Lake"
+  },
+  {
+    "url": "houseboats-in-kashmir.html",
+    "title": "Houseboats in Kashmir",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-07-20",
+    "description": "Complete guide to houseboats in Kashmir: locations, seasons, pricing"
+  },
+  {
+    "url": "best-houseboats-srinagar-dal-lake.html",
+    "title": "Best Houseboats: Srinagar Dal Lake",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-07-20",
+    "description": "How to compare and choose the best houseboats in Srinagar Dal Lake"
+  },
+  {
+    "url": "best-houseboats-near-dal-lake.html",
+    "title": "Best Houseboats Near Dal Lake",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-07-29",
+    "description": "Location guide: Boulevard Road, Dal Gate, Nagin Lake and TRC compared"
+  },
+  {
+    "url": "about-dal-lake.html",
+    "title": "About Dal Lake",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-07-29",
+    "description": "Complete guide to Dal Lake: history, houseboats, floating gardens, Shikara rides"
+  },
+  {
+    "url": "how-dal-lake-houseboats-are-made.html",
+    "title": "How Houseboats Are Made",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-07-29",
+    "description": "How Dal Lake houseboats are built: traditional Kashmir construction methods"
+  },
+  {
+    "url": "sonamarg.html",
+    "title": "Sonamarg Travel Guide",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-07-29",
+    "description": "Complete Sonamarg travel guide: Thajiwas Glacier, Zojila Pass, best time to visit"
+  },
+  {
+    "url": "blog-ultimate-guide-olympias-athena.html",
+    "title": "Complete Guide to Olympias Athena",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-07-29",
+    "description": "Everything you need to know about Olympias Athena Group of Houseboats"
+  },
+  {
+    "url": "terms.html",
+    "title": "Terms & Conditions",
+    "category": "legal",
+    "priority": 0.3,
+    "lastModified": "2026-05-18",
+    "description": "Terms and conditions for booking"
+  },
+  {
+    "url": "privacy.html",
+    "title": "Privacy Policy",
+    "category": "legal",
+    "priority": 0.3,
+    "lastModified": "2026-05-18",
+    "description": "Privacy policy and data protection"
+  }
+]
