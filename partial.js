@@ -104,12 +104,12 @@
       { url: 'blog-ultimate-guide-olympias-athena.html', title: 'Complete Guide to Olympias Athena', category: 'destinations', priority: 0.7 },
       { url: 'best-time-to-visit-kashmir.html', title: 'Best Time to Visit Kashmir', category: 'destinations', priority: 0.7 },
       { url: 'houseboat-vs-hotel-srinagar.html', title: 'Houseboat vs Hotel in Srinagar', category: 'destinations', priority: 0.7 },
-      { url: 'gulmarg-travel-guide.html', title: 'Gulmarg Travel Guide', category: 'destinations', priority: 0.7 },
       { url: 'kashmir-houseboat-cost.html', title: 'Kashmir Houseboat Cost Breakdown', category: 'destinations', priority: 0.7 },
-      { url: 'pahalgam-travel-guide.html', title: 'Pahalgam Travel Guide', category: 'destinations', priority: 0.7 },
       { url: '7-day-kashmir-itinerary.html', title: '7-Day Kashmir Itinerary', category: 'destinations', priority: 0.75 },
       { url: 'is-kashmir-safe-to-visit.html', title: 'Is Kashmir Safe to Visit?', category: 'destinations', priority: 0.75 },
       { url: 'kashmiri-wazwan-guide.html', title: 'Kashmiri Wazwan Guide', category: 'destinations', priority: 0.7 },
+      { url: 'how-to-reach-srinagar.html', title: 'How to Reach Srinagar', category: 'destinations', priority: 0.7 },
+      { url: 'dal-lake-sunrise-photography.html', title: 'Dal Lake Sunrise Photography', category: 'destinations', priority: 0.65 },
       { url: 'terms.html', title: 'Terms & Conditions', category: 'legal', priority: 0.3 },
       { url: 'privacy.html', title: 'Privacy Policy', category: 'legal', priority: 0.3 }
     ];
