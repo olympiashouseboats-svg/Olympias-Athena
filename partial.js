@@ -101,7 +101,7 @@
       { url: 'about-dal-lake.html', title: 'About Dal Lake', category: 'destinations', priority: 0.75 },
       { url: 'how-dal-lake-houseboats-are-made.html', title: 'How Houseboats Are Made', category: 'destinations', priority: 0.7 },
       { url: 'sonamarg.html', title: 'Sonamarg Travel Guide', category: 'destinations', priority: 0.7 },
-      { url: 'blog-ultimate-guide-olympias-athena.html', title: 'Complete Guide to Olympias Athena', category: 'destinations', priority: 0.7 },
+      { url: 'olympias-athena-houseboats-guide.html', title: 'Olympias Athena Houseboats Guide', category: 'destinations', priority: 0.75 },
       { url: 'best-time-to-visit-kashmir.html', title: 'Best Time to Visit Kashmir', category: 'destinations', priority: 0.7 },
       { url: 'houseboat-vs-hotel-srinagar.html', title: 'Houseboat vs Hotel in Srinagar', category: 'destinations', priority: 0.7 },
       { url: 'kashmir-houseboat-cost.html', title: 'Kashmir Houseboat Cost Breakdown', category: 'destinations', priority: 0.7 },
