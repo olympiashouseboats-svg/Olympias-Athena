@@ -96,7 +96,7 @@
       { url: 'athena-houseboat.html', title: 'Athena Houseboat', category: 'services', priority: 0.9 },
       { url: 'olympias-houseboat.html', title: 'Olympias Houseboat', category: 'services', priority: 0.9 },
       { url: 'houseboats-in-kashmir.html', title: 'Houseboats in Kashmir', category: 'destinations', priority: 0.75 },
-      { url: 'best-houseboats-srinagar-dal-lake.html', title: 'Best Houseboats: Srinagar Dal Lake', category: 'destinations', priority: 0.75 },
+      { url: 'best-houseboats-jammu-kashmir.html', title: 'Best Houseboats in Jammu & Kashmir', category: 'destinations', priority: 0.75 },
       { url: 'best-houseboats-near-dal-lake.html', title: 'Best Houseboats Near Dal Lake', category: 'destinations', priority: 0.7 },
       { url: 'about-dal-lake.html', title: 'About Dal Lake', category: 'destinations', priority: 0.75 },
       { url: 'how-dal-lake-houseboats-are-made.html', title: 'How Houseboats Are Made', category: 'destinations', priority: 0.7 },
