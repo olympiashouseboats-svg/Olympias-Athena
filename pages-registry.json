@@ -72,14 +72,6 @@
     "description": "Complete guide to houseboats in Kashmir: locations, seasons, pricing"
   },
   {
-    "url": "best-houseboats-srinagar-dal-lake.html",
-    "title": "Best Houseboats: Srinagar Dal Lake",
-    "category": "destinations",
-    "priority": 0.75,
-    "lastModified": "2026-07-20",
-    "description": "How to compare and choose the best houseboats in Srinagar Dal Lake"
-  },
-  {
     "url": "best-houseboats-near-dal-lake.html",
     "title": "Best Houseboats Near Dal Lake",
     "category": "destinations",
@@ -198,5 +190,13 @@
     "priority": 0.75,
     "lastModified": "2026-08-09",
     "description": "Complete guide to Olympias Athena: rooms, amenities, Wazwan cuisine, Shikara rides and booking"
+  },
+  {
+    "url": "best-houseboats-jammu-kashmir.html",
+    "title": "Best Houseboats in Jammu & Kashmir",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-08-10",
+    "description": "How to identify quality houseboats: a 7-point checklist and red flags to avoid"
   }
 ]
