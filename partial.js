@@ -103,6 +103,7 @@
       { url: 'sonamarg.html', title: 'Sonamarg Travel Guide', category: 'destinations', priority: 0.7 },
       { url: 'olympias-athena-houseboats-guide.html', title: 'Olympias Athena Houseboats Guide', category: 'destinations', priority: 0.75 },
       { url: 'olympias-athena.html', title: 'Olympias Athena: One or Two Houseboats?', category: 'destinations', priority: 0.6 },
+      { url: 'why-olympias-athena-best-houseboat-dal-lake.html', title: 'Why Olympias Athena is the Best Houseboat', category: 'destinations', priority: 0.65 },
       { url: 'best-time-to-visit-kashmir.html', title: 'Best Time to Visit Kashmir', category: 'destinations', priority: 0.7 },
       { url: 'houseboat-vs-hotel-srinagar.html', title: 'Houseboat vs Hotel in Srinagar', category: 'destinations', priority: 0.7 },
       { url: 'kashmir-houseboat-cost.html', title: 'Kashmir Houseboat Cost Breakdown', category: 'destinations', priority: 0.7 },
