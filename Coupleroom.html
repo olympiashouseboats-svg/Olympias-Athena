@@ -2,6 +2,35 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVPEWJ2Z0C"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HVPEWJ2Z0C');
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function track(selector, eventName) {
+      document.querySelectorAll(selector).forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', eventName, {
+              event_category: 'engagement',
+              link_url: el.href,
+              page_path: window.location.pathname
+            });
+          }
+        });
+      });
+    }
+    track('a[href*="wa.me"], a[href*="whatsapp.com"]', 'whatsapp_click');
+    track('a[href^="tel:"]', 'phone_call_click');
+    track('a[href^="mailto:"]', 'email_click');
+  });
+</script>
+
   <title>Redirecting to Couple Room | Olympias Athena</title>
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://olympiasathena.com/coupleroom.html">
