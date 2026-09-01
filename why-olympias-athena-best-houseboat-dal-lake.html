@@ -42,6 +42,27 @@
 
   gtag('config', 'G-HVPEWJ2Z0C');
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function track(selector, eventName) {
+      document.querySelectorAll(selector).forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', eventName, {
+              event_category: 'engagement',
+              link_url: el.href,
+              page_path: window.location.pathname
+            });
+          }
+        });
+      });
+    }
+    track('a[href*="wa.me"], a[href*="whatsapp.com"]', 'whatsapp_click');
+    track('a[href^="tel:"]', 'phone_call_click');
+    track('a[href^="mailto:"]', 'email_click');
+  });
+</script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
