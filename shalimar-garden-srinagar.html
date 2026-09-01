@@ -17,6 +17,27 @@
 
   gtag('config', 'G-HVPEWJ2Z0C');
 </script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function track(selector, eventName) {
+      document.querySelectorAll(selector).forEach(function (el) {
+        el.addEventListener('click', function () {
+          if (typeof gtag === 'function') {
+            gtag('event', eventName, {
+              event_category: 'engagement',
+              link_url: el.href,
+              page_path: window.location.pathname
+            });
+          }
+        });
+      });
+    }
+    track('a[href*="wa.me"], a[href*="whatsapp.com"]', 'whatsapp_click');
+    track('a[href^="tel:"]', 'phone_call_click');
+    track('a[href^="mailto:"]', 'email_click');
+  });
+</script>
+
 </head>
 <body data-page="blog">
 <nav id="navbar" data-hero="false" class="scrolled"><a href="index.html" class="nav-logo"><div class="nav-logo-icon">O</div><div class="nav-logo-text"><span class="nav-logo-name">Olympias Athena</span><span class="nav-logo-sub">Dal Lake · Srinagar · Kashmir</span></div></a><nav class="nav-links"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://wa.me/919596431735" target="_blank" class="nav-cta">Book Now</a></nav><button class="nav-hamburger" id="hamburger"><span></span><span></span><span></span></button></nav><div class="nav-mobile" id="mobile-nav"><a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="services.html">Services</a><a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a><a href="https://wa.me/919596431735" target="_blank" class="mobile-wa">📲 WhatsApp</a></div>
