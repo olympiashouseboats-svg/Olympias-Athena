@@ -1,0 +1,24 @@
+/* TEAM */
+
+Owner & Host: Saif ul Rehman Guroo
+Contact: guroosaif6@gmail.com
+WhatsApp / Phone: +91 9596431735
+Location: Ghat No. 13, Boulevard Road, Dal Lake, Srinagar, Jammu & Kashmir 190001, India
+From: Srinagar, Kashmir, India
+
+/* SITE */
+
+Business: Olympias Athena Group of Houseboats
+Last update: 2026/07/11
+Language: English
+Doctype: HTML5
+IDE: —
+Standards: HTML5, CSS3, Schema.org structured data (LodgingBusiness, LocalBusiness, FAQPage, BlogPosting)
+Components: Google Fonts (Cormorant Garamond, Jost, Playfair Display), Google Maps embed, Google Analytics (gtag.js)
+Software: —
+
+/* THANKS */
+
+To every guest who has stayed on Dal Lake and shared their story —
+and to the Hanji boat-building families whose craftsmanship built
+the Kashmiri houseboat tradition this property carries on.
