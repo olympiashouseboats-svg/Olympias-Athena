@@ -1,0 +1,218 @@
+[
+  {
+    "url": "index.html",
+    "title": "Home",
+    "category": "main",
+    "priority": 1.0,
+    "lastModified": "2026-05-18",
+    "description": "Luxury houseboat stay on Dal Lake, Srinagar, Kashmir"
+  },
+  {
+    "url": "about.html",
+    "title": "About Us",
+    "category": "main",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Learn about Olympias Athena Group of Houseboats and our story"
+  },
+  {
+    "url": "rooms.html",
+    "title": "Rooms",
+    "category": "main",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Explore our luxury houseboat rooms with Dal Lake views"
+  },
+  {
+    "url": "gallery.html",
+    "title": "Gallery",
+    "category": "main",
+    "priority": 0.8,
+    "lastModified": "2026-05-18",
+    "description": "Photo gallery of our houseboats, rooms, and Dal Lake scenery"
+  },
+  {
+    "url": "contact.html",
+    "title": "Contact",
+    "category": "main",
+    "priority": 0.8,
+    "lastModified": "2026-05-18",
+    "description": "Get in touch for bookings and enquiries"
+  },
+  {
+    "url": "services.html",
+    "title": "Services",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-05-18",
+    "description": "Premium houseboat services including luxury stays, meals, and Dal Lake experiences"
+  },
+  {
+    "url": "athena-houseboat.html",
+    "title": "Athena Houseboat",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-07-29",
+    "description": "Premium hand-carved houseboat at Boulevard Road, Ghat No. 13, Dal Lake"
+  },
+  {
+    "url": "olympias-houseboat.html",
+    "title": "Olympias Houseboat",
+    "category": "services",
+    "priority": 0.9,
+    "lastModified": "2026-07-29",
+    "description": "Premium hand-carved houseboat at Boulevard Road, Ghat No. 13, Dal Lake"
+  },
+  {
+    "url": "houseboats-in-kashmir.html",
+    "title": "Houseboats in Kashmir",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-07-20",
+    "description": "Complete guide to houseboats in Kashmir: locations, seasons, pricing"
+  },
+  {
+    "url": "best-houseboats-near-dal-lake.html",
+    "title": "Best Houseboats Near Dal Lake",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-07-29",
+    "description": "Location guide: Boulevard Road, Dal Gate, Nagin Lake and TRC compared"
+  },
+  {
+    "url": "about-dal-lake.html",
+    "title": "About Dal Lake",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-07-29",
+    "description": "Complete guide to Dal Lake: history, houseboats, floating gardens, Shikara rides"
+  },
+  {
+    "url": "how-dal-lake-houseboats-are-made.html",
+    "title": "How Houseboats Are Made",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-07-29",
+    "description": "How Dal Lake houseboats are built: traditional Kashmir construction methods"
+  },
+  {
+    "url": "sonamarg.html",
+    "title": "Sonamarg Travel Guide",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-07-29",
+    "description": "Complete Sonamarg travel guide: Thajiwas Glacier, Zojila Pass, best time to visit"
+  },
+  {
+    "url": "best-time-to-visit-kashmir.html",
+    "title": "Best Time to Visit Kashmir",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-08-03",
+    "description": "Month-by-month weather, crowds and prices to help plan your Kashmir trip"
+  },
+  {
+    "url": "houseboat-vs-hotel-srinagar.html",
+    "title": "Houseboat vs Hotel in Srinagar",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-08-03",
+    "description": "Cost, comfort, location and experience compared side-by-side"
+  },
+  {
+    "url": "kashmir-houseboat-cost.html",
+    "title": "Kashmir Houseboat Cost Breakdown",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-08-04",
+    "description": "Budget, mid-range and premium houseboat prices per night explained"
+  },
+  {
+    "url": "7-day-kashmir-itinerary.html",
+    "title": "7-Day Kashmir Itinerary",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-08-05",
+    "description": "Day-by-day plan: Dal Lake houseboat base plus Gulmarg, Pahalgam and Sonamarg"
+  },
+  {
+    "url": "is-kashmir-safe-to-visit.html",
+    "title": "Is Kashmir Safe to Visit?",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-08-06",
+    "description": "An honest, practical guide to tourist-area safety and current advisories"
+  },
+  {
+    "url": "kashmiri-wazwan-guide.html",
+    "title": "Kashmiri Wazwan Guide",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-08-06",
+    "description": "History, key dishes, serving traditions and where to try authentic Wazwan"
+  },
+  {
+    "url": "how-to-reach-srinagar.html",
+    "title": "How to Reach Srinagar",
+    "category": "destinations",
+    "priority": 0.7,
+    "lastModified": "2026-08-07",
+    "description": "Flight, rail and road routes to Srinagar compared, with costs and travel times"
+  },
+  {
+    "url": "dal-lake-sunrise-photography.html",
+    "title": "Dal Lake Sunrise Photography",
+    "category": "destinations",
+    "priority": 0.65,
+    "lastModified": "2026-08-07",
+    "description": "Best photography spots, timing by season, and gear tips for Dal Lake at dawn"
+  },
+  {
+    "url": "terms.html",
+    "title": "Terms & Conditions",
+    "category": "legal",
+    "priority": 0.3,
+    "lastModified": "2026-05-18",
+    "description": "Terms and conditions for booking"
+  },
+  {
+    "url": "privacy.html",
+    "title": "Privacy Policy",
+    "category": "legal",
+    "priority": 0.3,
+    "lastModified": "2026-05-18",
+    "description": "Privacy policy and data protection"
+  },
+  {
+    "url": "olympias-athena-houseboats-guide.html",
+    "title": "Olympias Athena Houseboats Guide",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-08-09",
+    "description": "Complete guide to Olympias Athena: rooms, amenities, Wazwan cuisine, Shikara rides and booking"
+  },
+  {
+    "url": "best-houseboats-jammu-kashmir.html",
+    "title": "Best Houseboats in Jammu & Kashmir",
+    "category": "destinations",
+    "priority": 0.75,
+    "lastModified": "2026-08-10",
+    "description": "How to identify quality houseboats: a 7-point checklist and red flags to avoid"
+  },
+  {
+    "url": "olympias-athena.html",
+    "title": "Olympias Athena: One or Two Houseboats?",
+    "category": "destinations",
+    "priority": 0.6,
+    "lastModified": "2026-08-10",
+    "description": "Understanding our two sister houseboats: identical standards, unified management"
+  },
+  {
+    "url": "why-olympias-athena-best-houseboat-dal-lake.html",
+    "title": "Why Olympias Athena is the Best Houseboat",
+    "category": "destinations",
+    "priority": 0.65,
+    "lastModified": "2026-08-11",
+    "description": "What sets Olympias Athena apart: owner hospitality, location, craftsmanship, transparent pricing"
+  }
+]
